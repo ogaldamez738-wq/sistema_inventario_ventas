@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - TECNOZONE</title>
+</head>
+<body>
+    <header>
+        <div class="barra-superior">
+            <img src="logo.png" alt="Logo TECNOZONE" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <div class="formulario">
+            <h2>Registrarse</h2>
+            <form action="registro.php" method="POST">
+    <input type="text" name="nombre" placeholder="Nombre de usuario" required>
+    <input type="text" name="Apellido" placeholder="Apellido de usuario" required>
+    <input type="text" name="nombre_de_usuario" placeholder="usuario" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Contraseña" required>
+
+    <div class="recordar">
+        <input type="checkbox" id="recordar">
+        <label for="recordar">Recordarme</label>
+    </div>
+
+    <button type="submit">Aceptar y unirse</button>
+</form>
+        </div>
+    </main>
+</body>
+</html>
+
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.barra-superior {
+    background-color: #0d5fa5;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 15px;
+}
+
+.logo {
+    height: 30px;
+}
+
+.formulario {
+    background-color: #d9d9d9;
+    width: 320px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.formulario h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px #00000033;
+}
+
+.formulario input[type="email"],
+.formulario input[type="text"],
+.formulario input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.recordar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.recordar input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+button {
+    background-color: #7d7d7d;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+</style>
