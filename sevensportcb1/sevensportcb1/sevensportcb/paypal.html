@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago con PayPal - SEVENSPORT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#1e3a8a',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #dc2626;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #dc2626 !important;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-dark text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl font-bold">
+                        <i class="fas fa-futbol mr-2 text-primary"></i>SEVENSPORT
+                    </div>
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                        <a href="futbol.html" class="nav-link">Fútbol</a>
+                        <a href="basketball.html" class="nav-link">Baloncesto</a>
+                    </nav>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <a href="cart.html" class="text-white text-xl">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-badge">3</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="login.html" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors">
+                            Iniciar Sesión
+                        </a>
+                        <a href="register.html" class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors ml-2">
+                            Registrarse
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PayPal Payment Section -->
+    <section class="bg-gray-100 min-h-screen flex items-center justify-center py-16">
+        <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md text-center">
+            <div class="text-6xl text-primary mb-6">
+                <i class="fab fa-paypal"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Pago con PayPal</h2>
+            <p class="text-gray-600 mb-6">Estás a un paso de completar tu compra</p>
+            
+            <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                <div class="flex justify-between mb-2">
+                    <span>Productos (3):</span>
+                    <span>$295.48</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span>Envío:</span>
+                    <span>$15.00</span>
+                </div>
+                <div class="flex justify-between text-lg font-bold mt-4 pt-4 border-t">
+                    <span>Total:</span>
+                    <span class="text-primary">$310.48</span>
+                </div>
+            </div>
+            
+            <div class="space-y-4 mb-6">
+                <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                    <i class="fab fa-paypal mr-2"></i>Pagar con PayPal
+                </button>
+                <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                    <i class="fas fa-credit-card mr-2"></i>Pagar con Tarjeta
+                </button>
+            </div>
+            
+            <div class="text-sm text-gray-500">
+                <p>Transacción segura con encriptación SSL</p>
+                <p class="mt-2">Tu pago será procesado por PayPal</p>
+            </div>
+            
+            <div class="mt-6">
+                <a href="confirmation.html" class="text-primary hover:text-red-700 font-medium">
+                    ¿Ya completaste el pago? Confirmar pedido
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">
+                        <i class="fas fa-futbol mr-2 text-primary"></i>SEVENSPORT
+                    </div>
+                    <p class="text-gray-400">Donde el deporte vive y la pasión nos une hecho por jovenes para campeones.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Categorías</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="futbol.php" class="hover:text-white nav-link">Fútbol</a></li>
+                        <li><a href="basketball.php" class="hover:text-white nav-link">Baloncesto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Soporte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Contacto</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Política de Envíos</a></li>
+                        <li><a href="#" class="hover:text-white">Devoluciones</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i>+503 7597 1171</li>
+                        <li><i class="fas fa-envelope mr-2"></i>sevensport@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Ciudad Barrios 8a Avenida Sur</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 SEVENSPORT. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
