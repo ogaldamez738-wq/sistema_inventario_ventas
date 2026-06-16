@@ -89,8 +89,9 @@ font-weight:bold;
 Usuario:
 <strong><?php echo $_SESSION['nombre']; ?></strong>
 
-<a href="logout.php" class="btn-salir">
-Cerrar Sesión
+<a href="nuevo_producto.php"
+style="background:#3b82f6;color:white;padding:10px;text-decoration:none;border-radius:5px;">
++ Nuevo Producto
 </a>
 </div>
 </div>
